@@ -1,8 +1,9 @@
 import os
 import streamlit as st
 from langchain.llms import OpenAI
-from cons import openai_key
-# Set your OpenAI API key
+from dotenv import dotenv_values
+env_vars = dotenv_values(".env")
+api_key = env_vars.get("openai_key")# Set your OpenAI API key
 os.environ["OPENAI_API_KEY"] =openai_key
 
 # Initialize the language model
